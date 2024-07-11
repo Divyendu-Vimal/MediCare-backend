@@ -15,7 +15,9 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 8000;
 
-// Configure CORS to allow requests from your frontend's origin
+// Debugging log to ensure the environment variable is loaded
+console.log("MongoDB URL:", process.env.MONGO_URL);
+
 app.use(
   cors({
     origin: "https://medicare-divyenduvimals-projects-0a9ec642.vercel.app",
